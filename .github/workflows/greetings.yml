@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Greet the contributor'
-        uses: garg3133/welcome-new-contributors@v1.2
+        uses: bartick/custom-interactions@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
@@ -40,3 +40,7 @@ jobs:
             
             Best of luck on your Contributions
             For further queries you can join our discord for support : https://discord.gg/W6PmEjjQsA
+          pr-once: true
+          issue-once: true
+          pr-number: 1
+          issue-number: 1
