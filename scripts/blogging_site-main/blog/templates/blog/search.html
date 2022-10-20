@@ -1,0 +1,73 @@
+{%extends "blog/base.html"%}
+{%block content%}
+{%for post in posts %}
+            <article class="media content-section">
+             <img class="rounded-circle article-img" src="{{post.author.profile.image.url}}" >
+             <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+                    <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content|urlize|safe }}</p>
+             </div>
+            </article>
+        {% endfor %}
+
+        {%  if is_paginated  %}
+           {%  if page_obj.has_previous %}
+              <a class="btn btn-outline-info btn-sm mb-4" href="?page=1">First</a>
+              <a class="btn btn-outline-info btn-sm mb-4" href="?page={{page_obj.previous_page_number}}">Previous</a>
+           
+
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+               
+                {% if page_obj.number == num  %}
+                  <a class="btn btn-info mb-4" href="?page={{num}}">{{num}}</a>
+            
+                {%  elif num > page_obj.number|add:'-2' and  num < page_obj.number|add:'2' %}  
+                   <a class="btn btn-outline-info btn-sm mb-4" href="?page={{num}}">{{num}}</a> 
+                {% endif %}
+            {% endfor %}
+
+            {%  if page_obj.has_next %}
+               <a class="btn btn-outline-info btn-sm mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+           
+               <a class="btn btn-outline-info btn-sm mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+         
+
+            {% endif %}
+             
+        {% endif %}
+         {% if searched %}
+            <h1>You searched for {{searched}}</h1>
+            <br>
+            {% for search_result in search_results %}
+               
+                <article class="media content-section">
+                  <img class="rounded-circle article-img" src="{{search_result.author.profile.image.url}}" >
+                  <div class="media-body">
+                     <div class="article-metadata">
+                       {{ search_result.author }}
+                        <small class="text-muted">{{ search_result.date_posted|date:"F d, Y" }}</small>
+                     </div>
+                     <h2>{{ search_result.title }}</h2>
+                     {% if search_result.header_image %}
+                           <img src="{{search_result.header_image.url}}"    class="responsive">
+                     {% endif %}
+
+                     <p class="article-content">{{ search_result.content|safe|urlize }}</p>
+                  </div>
+               </article>
+           
+         
+            {% endfor %}
+         {% else %}
+            <h1>Oops! we need some thing to search</h1>
+         {% endif %}
+         
+
+
+
+{%endblock content%}
