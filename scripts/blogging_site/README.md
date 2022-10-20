@@ -1,5 +1,5 @@
 # Simple Blogging Website
-This is a blogging website where any one can register/login and share there feelings. 
+This is a blogging website where any one can register/login and share their feelings. 
 The website is hosted in Heroku(https://www.heroku.com/) and cloudinary(https://cloudinary.com/) is used to store user credentials.
 
 ## The website can be accessed in the following link: https://collegestudd.herokuapp.com/
