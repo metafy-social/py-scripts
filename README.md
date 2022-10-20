@@ -58,6 +58,13 @@ Thanks a lot for spending your time helping! Keep rocking 🍻
             <br />
             <sub><b>Metafy</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/rahulkarda">
+            <img src="https://avatars.githubusercontent.com/u/76204863?v=4" width="100;" alt="rahulkarda"/>
+            <br />
+            <sub><b>Rahul Karda</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: contributors -end -->
