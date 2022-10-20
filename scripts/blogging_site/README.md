@@ -6,11 +6,11 @@ The website is hosted in Heroku(https://www.heroku.com/) and cloudinary(https://
 
 # Preview 
 
-![image](https://user-images.githubusercontent.com/115635715/197012737-cd323ba0-e60e-4858-adc6-2f3f404fdbe9.png)
+![image](https://user-images.githubusercontent.com/115635715/197015079-c6a2be94-cb92-4280-983f-9372a9f6bb26.png)
 
 ![image](https://user-images.githubusercontent.com/115635715/197012866-e152d818-8388-44b5-9f55-c93e039311d8.png)
 
-![image](https://user-images.githubusercontent.com/115635715/197013056-08deaca5-4462-4175-a37d-07e464449ce2.png)
+![image](https://user-images.githubusercontent.com/115635715/197015441-ce853700-ff9e-416b-9b46-da7cac6d362e.png)
 
 
 
