@@ -5,11 +5,15 @@ The website is hosted in Heroku(https://www.heroku.com/) and cloudinary(https://
 ## The website can be accessed in the following link: https://collegestudd.herokuapp.com/
 
 # Preview 
-![image](https://user-images.githubusercontent.com/115635715/197008616-d504981b-7ec6-4bd1-a23e-e7919b7fcba0.png)
 
-![image](https://user-images.githubusercontent.com/115635715/197008661-1fe572c0-9952-49c4-9c69-c8bfa31526da.png)
+![image](https://user-images.githubusercontent.com/115635715/197012737-cd323ba0-e60e-4858-adc6-2f3f404fdbe9.png)
 
-![image](https://user-images.githubusercontent.com/115635715/197008701-9b2a1641-546e-4c68-a2a6-484600f8fbc4.png)
+![image](https://user-images.githubusercontent.com/115635715/197012866-e152d818-8388-44b5-9f55-c93e039311d8.png)
+
+![image](https://user-images.githubusercontent.com/115635715/197013056-08deaca5-4462-4175-a37d-07e464449ce2.png)
+
+
+
 
 # Features:
 -Registratin form<br>
