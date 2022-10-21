@@ -1,0 +1,83 @@
+import random
+import sys
+from numpy import true_divide
+import pygame
+from pygame.locals import*
+
+FPS = 32
+SCREENWIDTH = 289
+SCREENHEIGHT = 511
+SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
+GROUNDY = SCREENHEIGHT * 0.8
+GAME_SPRITES = {}
+GAME_SOUNDS = {}
+PLAYER = '/Users/ayush/Downloads/OneDrive-2022-05-24/images/bird.png.png'
+BACKGROUND = '/Users/ayush/Downloads/OneDrive-2022-05-24/images/background img1.png.png'
+PIPE = '/Users/ayush/Downloads/OneDrive-2022-05-24/images/pipe.png.png'
+
+
+def welcomeScreen():
+    playerx = int(SCREENWIDTH / 5)
+    playery = int(SCREENHEIGHT - GAME_SPRITES['player'].get_height()) / 2
+    messagex = int(SCREENHEIGHT - GAME_SPRITES['message'].get_width()) / 2
+    messagey = int(SCREENHEIGHT * 0.13)
+    basex = 0
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+
+            elif event.type == pygame.KEYDOWN and (event.key == pygame.K_SPACE or event.key == pygame.K_UP):
+                return
+            else:
+                SCREEN.blit(GAME_SPRITES['background'], (0, 0))
+                SCREEN.blit(GAME_SPRITES['player'], (playerx, playery))
+                SCREEN.blit(GAME_SPRITES['message'], (messagex, messagey))
+                SCREEN.blit(GAME_SPRITES['base'], (basex, GROUNDY))
+                pygame.display.update()
+                FPSCLOCK.tick(FPS)
+
+
+def mainGame():
+    score = 0
+    playerx = int(SCREENWIDTH/5)
+    playery = int(SCREENWIDTH/2)
+    basex = 0
+
+
+if __name__ == "main":
+    pygame.init()
+    FPSCLOCK = pygame.time.Clock()
+    pygame.display.set_caption('Flappy Bird by team3')
+    GAME_SPRITES['numbers'] = (
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/1.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/2.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/3.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/4.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/5.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/6.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/7.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/8.png.png').convert_alpha(),
+        pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/9.png.png').convert_alpha(),
+    )
+
+    GAME_SPRITES['message'] = pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/strt.png.png').convert_alpha(),
+    GAME_SPRITES['base'] = pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/base.png.png').convert_alpha(),
+    GAME_SPRITES['pipe'] =(
+              pygame.transform.rotate(pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/pipe.png.png').convert_alpha(), 180), \
+              pygame.image.load('/Users/ayush/Downloads/OneDrive-2022-05-24/images/pipe.png.png').convert_alpha(),
+    )
+
+   # GAME_SOUNDS['hit'] = pygame.mixer.Sound('gallery/audio/hit.wav')
+    #GAME_SOUNDS['point'] = pygame.mixer.Sound('gallery/audio/point.wav')
+    GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('/Users/ayush/Downloads/OneDrive-2022-05-24/sound/swoosh.wav.mp3')
+    #GAME_SOUNDS['wing'] = pygame.mixer.Sound('gallery/audio/wing.wav')
+
+    GAME_SPRITES['background'] = pygame.image.load(BACKGROUND).convert_alpha()
+    GAME_SPRITES['player'] = pygame.image.load(PLAYER).convert_alpha()
+
+    while True:
+        welcomeScreen()
+        mainGame()
