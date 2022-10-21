@@ -88,13 +88,47 @@ def random_select(rightpath):
     if rightpath == str(select):
         time.sleep(3)
         print('good you went down the correct path and cheated death!!')  
-        level2()
+        # level2()
+        restart = new_level()
+        random_key(restart)
+
 
     else:
         time.sleep(3)
         print('oh no you have been spotted by the robots!!!')
         time.sleep(3)
         print('and you have been shot multiple time and are now dead.')
+
+def new_level():
+        time.sleep(3)
+        print('I have given u two keys but a virus has entered my system')
+        time.sleep(3)
+        print('now I dont know which is the correct key but u have to select it')
+        time.sleep(3)
+        print('if u choose the correct one then u can continue, but if wrong then you will die... ')
+
+        question_three = ''
+        while question_three != '444' and question_three != '555':
+            time.sleep(1)
+            question_three = input('Choose the correct key: 444 or 555: ')
+        return question_three
+
+def random_key(correct_path):
+    # option_one = (444)
+    # option_two = (555)
+    select = random.randint(444, 555)
+
+    if correct_path == str(select):
+        time.sleep(3)
+        print('good you chose the correct option')  
+        level2()
+
+    else:
+        time.sleep(3)
+        print('You are now dead')
+        time.sleep(3)
+
+
 
 def level2():
     time.sleep(3)
@@ -347,11 +381,15 @@ while play_again == "yes" or play_again == "y":
     path()
     again = choice()
     random_select(again)
+    
+    # restart = new_level()
+    # random_key(restart)
+
+
     time.sleep(1)
 
     play_again = input("""Do you want to play again? 
     Type yes or y to play again and no or n if you want to stop: """)
-
 
 stop_game = "no"
 while stop_game == "no" or stop_game == "n":
