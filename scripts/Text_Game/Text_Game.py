@@ -108,27 +108,57 @@ def new_level():
         print('if u choose the correct one then u can continue, but if wrong then you will die... ')
 
         question_three = ''
-        while question_three != '444' and question_three != '555':
+        while question_three != '4' and question_three != '5':
             time.sleep(1)
-            question_three = input('Choose the correct key: 444 or 555: ')
+            question_three = input('Choose the correct key: 4 or 5: ')
         return question_three
 
 def random_key(correct_path):
     # option_one = (444)
     # option_two = (555)
-    select = random.randint(444, 555)
+    select = random.randint(4, 5)
 
     if correct_path == str(select):
         time.sleep(3)
-        print('good you chose the correct option')  
-        level2()
-
+        print('good you chose the correct option')
+        item ()
+        
     else:
         time.sleep(3)
         print('You are now dead')
         time.sleep(3)
 
 
+def item ():
+
+        # question_one = ''
+    # while question_one != 'run away' and question_one != 'shoot robot in head':
+    time.sleep(3)
+    print('oh no')
+    time.sleep(3)
+    print('in my system I have been flooded with a new object')
+    time.sleep(3)
+    print('....')
+    time.sleep(3)
+    print('in order to save me and yourself you need to pick the correct option')
+    time.sleep(3)
+    print('2 pills are inserted into my database the red pill and the blue pill')
+    time.sleep(3)
+    print('Choose Wisely!!!!!')
+    object = ''
+    while object != 'blue pill' and object != 'red pill':
+        object = input('which one do you choose: ')
+        if object == 'blue pill':
+            time.sleep(3)
+            print('correct you have saved us both')
+            time.sleep(3)
+            print('gr8 job!!!')
+            level2()
+        elif object == 'red pill':
+            time.sleep(3)
+            print('incorrect')
+            time.sleep(3)
+            print('you fool, you have killed us both now')
 
 def level2():
     time.sleep(3)
