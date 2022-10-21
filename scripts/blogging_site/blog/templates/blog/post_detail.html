@@ -1,0 +1,49 @@
+{%extends "blog/base.html"%}
+{%block content%}
+
+        <article class="media content-section">
+             <img class="rounded-circle article-img" src="{{object.author.profile.image.url}}" >
+             <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+                    <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+                    {% if object.author == user %}
+                    <div>
+                      <a class="btn btn-secondary btn-lm mt-1 mb-1" href="{% url 'post-update' object.id %}" >Update</a>
+                      <a class="btn btn-danger btn-lm mt-1 mb-1" href="{% url 'post-delete' object.id %}"  >Delete</a>
+                    </div>
+                    {% endif %}
+
+                    <form action="{% url 'like_post' post.pk %}" method="POST">
+                      {% csrf_token %}
+                      <button type="submit",name="post_id",value="{{object.id}}"class="btn btn-outline-info">like</button>&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-muted">{{total_likes}}</strong>
+                    </form>
+                </div>
+                <h2 class="article-title"></a>{{ object.title }}</h2>
+                <p class="article-content">
+                  {% if object.header_image %}
+                  <img src="{{object.header_image.url}}"    class="responsive">
+                  {% endif %}
+
+                </p>
+                <p class="article-content">{{ post.content|safe|urlize }}</p>
+             </div>
+          
+        </article>
+        <br><br><hr>
+        <div class="btn">
+          
+          <div class="card-footer">
+            <a class=" btn btn-secondary " href="{% url 'comment-new' post.pk%}">Comment</a>
+            {% for comment in post.comments.all %}
+                <p>
+                    <span class="font-weight-bold text-muted">{{ comment.author}}-{{ comment.date_added|date:"F d, Y" }} &middot;</span>
+                    <br>{{ comment|urlize }}
+                </p>
+            {% endfor %}
+            
+        </div>
+
+    
+  
+{%endblock content%}
