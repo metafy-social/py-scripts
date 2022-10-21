@@ -136,29 +136,24 @@ def item ():
     time.sleep(3)
     print('oh no')
     time.sleep(3)
-    print('in my system I have been flooded with a new object')
+    print('in my system I have been given a new object')
     time.sleep(3)
-    print('....')
-    time.sleep(3)
-    print('in order to save me and yourself you need to pick the correct option')
-    time.sleep(3)
-    print('2 pills are inserted into my database the red pill and the blue pill')
+    print('do you want to take the object or not')
     time.sleep(3)
     print('Choose Wisely!!!!!')
     object = ''
-    while object != 'blue pill' and object != 'red pill':
-        object = input('which one do you choose: ')
-        if object == 'blue pill':
+    while object != 'yes' and object != 'no':
+        object = input('yes or no: ')
+        if object == 'yes':
             time.sleep(3)
-            print('correct you have saved us both')
-            time.sleep(3)
-            print('gr8 job!!!')
+            print('great!!! you have chosen the healing potion which allows you to heal from any attacks')
             level2()
-        elif object == 'red pill':
+        elif object == 'no':
             time.sleep(3)
-            print('incorrect')
+            print('oh no')
             time.sleep(3)
-            print('you fool, you have killed us both now')
+            print('you fool, you have missed out on an incredible item known as the healing potion.')
+            level2()
 
 def level2():
     time.sleep(3)
