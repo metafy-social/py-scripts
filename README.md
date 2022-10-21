@@ -60,6 +60,20 @@ Thanks a lot for spending your time helping! Keep rocking 🍻
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/personal-use1">
+            <img src="https://avatars.githubusercontent.com/u/115635715?v=4" width="100;" alt="personal-use1"/>
+            <br />
+            <sub><b>Satabda Das</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/artgoblin">
+            <img src="https://avatars.githubusercontent.com/u/72606593?v=4" width="100;" alt="artgoblin"/>
+            <br />
+            <sub><b>Satabda Das</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/rahulkarda">
             <img src="https://avatars.githubusercontent.com/u/76204863?v=4" width="100;" alt="rahulkarda"/>
             <br />
