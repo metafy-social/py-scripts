@@ -53,6 +53,13 @@ Thanks a lot for spending your time helping! Keep rocking 🍻
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/N00rAhmed">
+            <img src="https://avatars.githubusercontent.com/u/86896171?v=4" width="100;" alt="N00rAhmed"/>
+            <br />
+            <sub><b>Noor Ahmed</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/metafy-bot">
             <img src="https://avatars.githubusercontent.com/u/114511019?v=4" width="100;" alt="metafy-bot"/>
             <br />
@@ -64,13 +71,6 @@ Thanks a lot for spending your time helping! Keep rocking 🍻
             <img src="https://avatars.githubusercontent.com/u/115635715?v=4" width="100;" alt="personal-use1"/>
             <br />
             <sub><b>Satabda Das</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/N00rAhmed">
-            <img src="https://avatars.githubusercontent.com/u/86896171?v=4" width="100;" alt="N00rAhmed"/>
-            <br />
-            <sub><b>Noor Ahmed</b></sub>
         </a>
     </td>
     <td align="center">
