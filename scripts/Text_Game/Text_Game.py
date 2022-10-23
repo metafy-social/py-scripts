@@ -26,6 +26,26 @@ def smileyface():
     time.sleep(0.3)
     print('|________________|')
 
+def lose_select():
+    time.sleep(3)
+    print('I have been given an option to show you')
+    time.sleep(3)
+    print('Someone has injected a new option')
+    time.sleep(3)
+    print('if you get it right then you can continue')
+    time.sleep(3)
+    print('if you get it wrong then you will lose again')
+    time.sleep(3)
+
+    select_choose = ''
+    while select_choose != 'blue pill' and select_choose != 'red pill':
+        select_choose = input('What do you choose, the red pill or the blue pill: ')
+
+        if select_choose == 'blue pill':
+            print('congrats you chose the correct option!!!')
+        elif select_choose == 'red pill':
+            print('WRONGGGG !!!!')
+            sys.exit()
 
 # First obstacle
 def level1():
@@ -40,18 +60,23 @@ def level1():
             time.sleep(3)
             print('too bad')
             
+            lose_select()
+            level1()
+            path()
+            again = choice()
+            random_select(again)
 
             # restart for when user fails
-            restart = input('Do you wanna restart: ')
-            if restart == 'yes':
-                start()
-                level1()
-                path()
-                again = choice()
-                random_select(again)
-            else:
-                print('bye')
-                sys.exit()       
+            # restart = input('Do you wanna restart: ')
+            # if restart == 'yes':
+            #     start()
+            #     level1()
+            #     path()
+            #     again = choice()
+            #     random_select(again)
+            # else:
+            #     print('bye')
+            #     sys.exit()       
         
         elif question_one == 'shoot robot in head':
             time.sleep(3)
@@ -98,6 +123,11 @@ def random_select(rightpath):
         print('oh no you have been spotted by the robots!!!')
         time.sleep(3)
         print('and you have been shot multiple time and are now dead.')
+        lose_select()
+        path()
+        again = choice()
+        random_select(again)
+
 
 def new_level():
         time.sleep(3)
@@ -128,6 +158,13 @@ def random_key(correct_path):
         print('You are now dead')
         time.sleep(3)
 
+        lose_select()
+        # path()
+        # again = choice()
+        # random_select(again)
+        
+        restart = new_level()
+        random_key(restart)
 
 def item ():
 
@@ -155,9 +192,38 @@ def item ():
             print('you fool, you have missed out on an incredible item known as the healing potion.')
             level2()
 
+
+def item ():
+
+        # question_one = ''
+    # while question_one != 'run away' and question_one != 'shoot robot in head':
+    time.sleep(3)
+    print('oh no')
+    time.sleep(3)
+    print('in my system I have been given a new object')
+    time.sleep(3)
+    print('do you want to take the object or not')
+    time.sleep(3)
+    print('Choose Wisely!!!!!')
+    object = ''
+    while object != 'yes' and object != 'no':
+        object = input('yes or no: ')
+        if object == 'yes':
+            time.sleep(3)
+            print('great!!! you have chosen the healing potion which allows you to heal from any attacks')
+            level2()
+        elif object == 'no':
+            time.sleep(3)
+            print('oh no')
+            time.sleep(3)
+            print('you fool, you have missed out on an incredible item known as the healing potion.')
+            time.sleep(3)
+            print('...')
+            level2()
+
 def level2():
     time.sleep(3)
-    print('You are running far away from the robots')
+    print('You are now running far away from the robots')
 
     time.sleep(2)
     print(""" ──────────────────────██
@@ -268,6 +334,8 @@ def level2():
             print('you are running away to find safety')
             time.sleep(3)
             print('but the cyborg has seen you and captured you')
+            lose_select()
+            level2()
 
         elif (items == 'bomb'):
             time.sleep(3)
@@ -278,6 +346,8 @@ def level2():
             print('because he is made from vibranium')
             time.sleep(3)
             print('you are instantly captured now')
+            lose_select()
+            level2()
 
         elif (items == "mech suit"):
             time.sleep(3)
@@ -332,6 +402,11 @@ def suit_options():
                 print('oh no the cyborg is made from vibranium')
                 time.sleep(3)
                 print('the cyborg punches you and takes you back to the robots')
+                
+                lose_select()
+                suit_options()
+                # level2()
+
             elif (select_option == 'body slam'):
                 time.sleep(3)
                 print('the cyborg has been knocked unconsious good job')
@@ -382,7 +457,19 @@ def level3():
             time.sleep(3)
             print("/@)|¬!}{")
             algorithm()
-            
+        
+        elif message == 'no':
+            time.sleep(3)
+            print('incorrect option')
+            time.sleep(3)
+            print('eventually ...')
+            time.sleep(3)
+            print('you die')
+            lose_select()
+            level3()
+            # suit_options()
+
+
 def algorithm():
             time.sleep(3)
             initiate = ''
