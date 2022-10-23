@@ -108,27 +108,52 @@ def new_level():
         print('if u choose the correct one then u can continue, but if wrong then you will die... ')
 
         question_three = ''
-        while question_three != '444' and question_three != '555':
+        while question_three != '4' and question_three != '5':
             time.sleep(1)
-            question_three = input('Choose the correct key: 444 or 555: ')
+            question_three = input('Choose the correct key: 4 or 5: ')
         return question_three
 
 def random_key(correct_path):
     # option_one = (444)
     # option_two = (555)
-    select = random.randint(444, 555)
+    select = random.randint(4, 5)
 
     if correct_path == str(select):
         time.sleep(3)
-        print('good you chose the correct option')  
-        level2()
-
+        print('good you chose the correct option')
+        item ()
+        
     else:
         time.sleep(3)
         print('You are now dead')
         time.sleep(3)
 
 
+def item ():
+
+        # question_one = ''
+    # while question_one != 'run away' and question_one != 'shoot robot in head':
+    time.sleep(3)
+    print('oh no')
+    time.sleep(3)
+    print('in my system I have been given a new object')
+    time.sleep(3)
+    print('do you want to take the object or not')
+    time.sleep(3)
+    print('Choose Wisely!!!!!')
+    object = ''
+    while object != 'yes' and object != 'no':
+        object = input('yes or no: ')
+        if object == 'yes':
+            time.sleep(3)
+            print('great!!! you have chosen the healing potion which allows you to heal from any attacks')
+            level2()
+        elif object == 'no':
+            time.sleep(3)
+            print('oh no')
+            time.sleep(3)
+            print('you fool, you have missed out on an incredible item known as the healing potion.')
+            level2()
 
 def level2():
     time.sleep(3)
