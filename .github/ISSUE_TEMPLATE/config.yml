@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Metafy Discord
+    url: https://discord.gg/W6PmEjjQsA 
+    about: An invite Link to our discord community
+  - name: Metafy Website
+    url: https://metafy.social
+    about: Our official website
+  - name: Metafy Contact Email
+    url: mailto:support@metafy.social
+    about: Metafy support email to help you easy contact us
