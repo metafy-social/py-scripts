@@ -67,17 +67,17 @@ Thanks a lot for spending your time helping! Keep rocking 🍻
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/artgoblin">
-            <img src="https://avatars.githubusercontent.com/u/72606593?v=4" width="100;" alt="artgoblin"/>
-            <br />
-            <sub><b>Satabda Das</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/N00rAhmed">
             <img src="https://avatars.githubusercontent.com/u/86896171?v=4" width="100;" alt="N00rAhmed"/>
             <br />
             <sub><b>Noor Ahmed</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/artgoblin">
+            <img src="https://avatars.githubusercontent.com/u/72606593?v=4" width="100;" alt="artgoblin"/>
+            <br />
+            <sub><b>Satabda Das</b></sub>
         </a>
     </td>
     <td align="center">
