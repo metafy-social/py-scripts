@@ -1,0 +1,4 @@
+spacy - en_core_web_sm model
+requests
+streamlit
+yfinance
